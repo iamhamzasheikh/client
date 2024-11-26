@@ -4,6 +4,7 @@ import Result from './Pages/Result'
 import BuyCredit from './Pages/BuyCredit'
 import NavBar from './Components/NavBar'
 import Footer from './Components/Footer'
+import Login from './Components/Login'
 
 const App = () => {
   return (
@@ -12,14 +13,14 @@ const App = () => {
        from-teal-50 to-orange-50'>
 
         <NavBar />
-
+        <Login/>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/result' element={<Result />} />
           <Route path='/buy' element={<BuyCredit />} />
         </Routes>
 
-        <Footer/>
+        <Footer />
       </div>
     </>
   )
