@@ -8,11 +8,11 @@ import Testimonials from "../Components/Testimonials"
 const Home = () => {
   return (
     <div>
-      <Header/>
-      <Steps/>
-      <Description/>
-      <Testimonials/>
-      <GenerateBtn/>
+      <Header />
+      <Steps />
+      <Description />
+      <Testimonials />
+      <GenerateBtn />
     </div>
   )
 }
