@@ -6,7 +6,7 @@ import { AppContext } from '../Context/AppContext'
 
 const NavBar = () => {
 
-  const {user} = useContext(AppContext)
+  const { user, setShowLogin } = useContext(AppContext)
   const navigate = useNavigate()
   return (
     <div className='flex items-center justify-between py-4'>
@@ -15,7 +15,7 @@ const NavBar = () => {
       <div>
         {user ?
           <div className='flex items-center gap-2 sm:gap-3'>
-            <button onClick={()=>navigate('/buy')} className='flex items-center gap-2 bg-blue-100 px-4 sm:px-6 py-1.5 sm:py-3 rounded-full
+            <button onClick={() => navigate('/buy')} className='flex items-center gap-2 bg-blue-100 px-4 sm:px-6 py-1.5 sm:py-3 rounded-full
             hover:scale-105 transition-all duration-500'>
               <img className='w-5' src={assets.credit_star} alt="" />
               <p className='text-xs sm:text-sm font-medium text-gray-600'>Credit Left : 50</p>
@@ -35,7 +35,7 @@ const NavBar = () => {
           :
           <div className='flex items-center gap-2 sm:gap-5'>
             <p onClick={() => navigate('/buy')} className='cursor-pointer'>Pricing</p>
-            <button className='bg-zinc-800 text-white px-7 py-2 sm:px-10 text-sm rounded-full'>Login</button>
+            <button onClick={() => setShowLogin(true)} className='bg-zinc-800 text-white px-7 py-2 sm:px-10 text-sm rounded-full'>Login</button>
           </div>
         }
 
